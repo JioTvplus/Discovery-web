@@ -1,1 +1,217 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DISCOVERY</title>
+    <meta charset="utf-8">
+    <meta name="description" content=" LIVE TV">
+    <meta name="keywords" content="OFFLINE ™ Live Tv">
+    <meta name="author" content="OFFLINE ™">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTyBImbZj1dV_SiZhvPkDH6wRnZHbPiD9Xg5AO3RsxMhQ55xg5w0e5cSw&s=10">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #ccc;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .channel {
+            background-color: #333;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .channel:hover {
+            transform: translateY(-5px);
+        }
+
+        .channel img {
+            width: 120px;
+            height: auto;
+            margin-bottom: 10px;
+            object-fit: contain;
+            loading: lazy;
+        }
+
+        .channel-details {
+            text-align: center;
+        }
+
+        .channel-name {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-align: center;
+            word-wrap: break-word;
+        }
+
+        .category-dropdown,
+        .search-input {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .category-dropdown label,
+        .search-input label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .category-dropdown select,
+        .search-input input {
+            padding: 8px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #ccc;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .category-dropdown select:focus,
+        .search-input input:focus {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        #channelFrame {
+            width: 100%;
+            height: 500px;
+            border: none;
+            display: none; /* Initially hidden */
+        }
+
+        @media screen and (max-width: 576px) {
+            .container {
+                grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            }
+
+            .channel img {
+                width: 80px;
+            }
+
+            #channelFrame {
+                height: 300px;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .container {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+
+            .channel img {
+                width: 150px;
+            }
+
+            #channelFrame {
+                height: 700px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="pageTitle">DISCOVERY</h1> <!-- Added id to the h1 -->
+
+    <iframe id="channelFrame" allowfullscreen allow="fullscreen"></iframe> <!-- Moved iframe to the top -->
+
+    
+
+    
+
+    <div class="container" id="channelsList">
+        <div class="channel" data-category="" onclick="openChannel('https://i.ibb.co/NS8jKMg/giphy-1.gif')"><img src="https://gifdb.com/images/high/telegram-cute-blue-shades-logo-vsjoshidc3e9gylv.gif" alt="OFFLINE™" loading="lazy"><div class="channel-details"><div class="channel-name">JOIN TELEGRAM</div></div></div>
+
+
+
+<div class="channel" data-category="" onclick="openChannel('Animal Planet.html')"><img src="https://ap2-prod-images.disco-api.com/2020/12/16/422ea635-4833-4401-bdaf-7c171c2e472c.png?bf=0&f=jpg&p=true&q=85&w=260" alt="OFFLINE ™" loading="lazy"><div class="channel-details"><div class="channel-name">Animal Planet  </div></div></div>
+
+<div class="channel" data-category="" onclick="openChannel('Discovery Channel.html')"><img src="https://ap2-prod-images.disco-api.com/2020/12/16/51e39f57-66bd-49a5-a166-c57f459f765f.png?bf=0&f=jpg&p=true&q=85&w=260" alt="OFFLINE ™" loading="lazy"><div class="channel-details"><div class="channel-name">Discovery Channel </div></div></div>
+
+<div class="channel" data-category="" onclick="openChannel('Discovery Kids.html')"><img src="https://ap2-prod-images.disco-api.com/2020/12/16/636b0db9-e298-43d3-97a2-f628986a0426.png?bf=0&f=jpg&p=true&q=85&w=260" alt="OFFLINE ™" loading="lazy"><div class="channel-details"><div class="channel-name">Discovery Kids</div></div></div>
+
+<div class="channel" data-category="" onclick="openChannel('Discovery Science.html')"><img src="https://ap2-prod-images.disco-api.com/2020/12/16/abed6104-df4b-4804-ae09-6040d48d6299.png?bf=0&f=jpg&p=true&q=85&w=260" alt="OFFLINE ™" loading="lazy"><div class="channel-details"><div class="channel-name">Discovery Science</div></div></div>
+
+<div class="channel" data-category="" onclick="openChannel('Discovery Turbo.html')"><img src="https://ap2-prod-images.disco-api.com/2020/12/16/8104e113-f6d2-46b2-85e2-c2c497eb8307.png?bf=0&f=jpg&p=true&q=85&w=260" alt="OFFLINE ™" loading="lazy"><div class="channel-details"><div class="channel-name">Discovery Turbo</div></div></div>
+
+<div class="channel" data-category="" onclick="openChannel('Eurosport HD.html')"><img src="https://ap2-prod-images.disco-api.com/2020/12/03/373989eb-46a9-4d3e-8d2e-80a76d77caee.png?bf=0&f=jpg&p=true&q=85&w=260" alt="OFFLINE ™" loading="lazy"><div class="channel-details"><div class="channel-name">Eurosport HD</div></div></div>
+
+<div class="channel" data-category="" onclick="openChannel('TLC HD.html')"><img src="https://ap2-prod-images.disco-api.com/2020/12/16/644fb820-4583-4141-b251-bb2a70f2ca80.png?bf=0&f=jpg&p=true&q=85&w=260" alt="OFFLINE ™" loading="lazy"><div class="channel-details"><div class="channel-name">TLC</div></div></div>
+
+
+      <script>
+        // Display a pop-up message when the page starts
+        window.addEventListener("load", function() {
+            var result = window.confirm("Join @VIP4k_TV for more updates?");
+            if (result) {
+                window.location.href = "https://t.me/VIP4k_TV";
+            }
+        });
+
+        // Function to filter channels by category
+        document.getElementById('category').addEventListener('change', function() {
+            var category = this.value;
+            var channels = document.querySelectorAll('.channel');
+            channels.forEach(function(channel) {
+                if (category === '' || channel.getAttribute('data-category') === category) {
+                    channel.style.display = 'block';
+                } else {
+                    channel.style.display = 'none';
+                }
+            }); 
+        });
+
+        // Function to search channels by name
+        document.getElementById('search').addEventListener('input', function() {
+            var searchQuery = this.value.toLowerCase();
+            var channels = document.querySelectorAll('.channel');
+            channels.forEach(function(channel) {
+                var channelName = channel.querySelector('.channel-name').textContent.toLowerCase();
+                if (channelName.includes(searchQuery)) {
+                    channel.style.display = 'block';
+                } else {
+                    channel.style.display = 'none';
+                }
+            });
+        });
+
+        // Function to open channel in iframe
+        function openChannel(url) {
+            var finalUrl = '' + url;
+            var iframe = document.getElementById('channelFrame');
+            var pageTitle = document.getElementById('pageTitle');
+            iframe.src = finalUrl;
+            iframe.style.display = 'block';
+            pageTitle.style.display = 'none'; // Hide the h1 element
+            iframe.scrollIntoView({ behavior: 'smooth' }); // Scroll to the iframe
+        }
+    </script>
+</body>
+</html>    
